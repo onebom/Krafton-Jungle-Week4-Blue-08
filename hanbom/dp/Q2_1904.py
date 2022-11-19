@@ -33,7 +33,7 @@ print(tileDP(x))
 
 # ---- 시간초과 및 recursionError ----
 #원인: 값이 큰 x에 대해서 함수값이 int를 초과하기 때문에 엄청 많은 메모리 차지를 하게된다.
-# => 따라서 하향식으로 풀게 될 경우, 재귀를 사용하기 때문에 메모리 효율이 좋지 않다.
+# => 따라서 하향식으로 풀게 될 경우, 재귀를 사용하기 때문에 함수 호출마다 메모리가 쌓여서, 메모리 효율이 좋지 않다.
 #해결: 하향식이 아닌 상향식으로 풀면 해결된다.
 # tile={
 #     0:0,
@@ -44,6 +44,7 @@ print(tileDP(x))
 # def tileDP(x):
 #     if x in tile:
 #         return tile[x]
+    
 #     tile[x]=(tileDP(x-1)+tileDP(x-2))%15746
 #     return tile[x]
 
