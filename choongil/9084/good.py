@@ -9,3 +9,4 @@ for _ in range(int(input())):
             if i < coin: continue
             dp[i] += dp[i - coin]
     print(dp[t])
+
